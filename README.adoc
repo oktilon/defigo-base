@@ -1,0 +1,87 @@
+= Defigo Variscite i.MX Yocto BSP
+
+== Supported boards
+
+All of Variscite's i.MX based SOMs/boards
+
+(In addition to the FSL Community supported boards, which are listed in their http://freescale.github.io/doc/release-notes/current[release notes] )
+
+
+
+== Quick Start Guide
+
+
+Once you have downloaded the source of all projects, you will have to
+call:
+
+[source.console]
+MACHINE=imx8qxp-var-som DISTRO=emakOS . var-setup-release.sh emak
+
+After this step, you will be with everything need for build an image.
+
+== Contributing
+
+To contribute to the development of this BSP and/or submit patches for
+new boards please send the patches against the respective project as
+informated bellow:
+
+The following layers are included on this release:
+
+ - *poky*: base build system and metadata
+  * Path: `sources/poky`
+  * GIT: `git://git.yoctoproject.org/poky`
+  * Mailing list: https://lists.yoctoproject.org/listinfo/yocto
+
+ - *meta-openembedded*: extra packages and features
+  * Path: `sources/meta-openembedded`
+  * GIT: `git://git.openembedded.org/meta-openembedded`
+  * Mailing list: http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/openembedded-devel
+  * *Note*: Use [meta-oe] in subject to easy the processing
+
+ - *meta-freescale*: support for Freescale's processors and board
+  * Path: `sources/meta-freescale`
+  * Project: https://github.com/Freescale/meta-freescale
+  * GIT: `git://github.com/Freescale/meta-freescale.git`
+  * Mailing list: https://lists.yoctoproject.org/listinfo/meta-freescale
+
+ - *meta-freescale-3rdparty*: support for boards using Freescale's processors
+  * Path: `sources/meta-freescale-3rdparty`
+  * Project: https://github.com/Freescale/meta-freescale-3rdparty
+  * GIT: `git://github.com/Freescale/meta-freescale-3rdparty.git`
+  * Mailing list: https://lists.yoctoproject.org/listinfo/meta-freescale
+  * *Note*: Use [3rdparty] in subject to easy the processing
+
+ - *meta-emak-distro*: Defigo minimal EmakOS
+  * Path: `sources/meta-emak-distro`
+  * Project: https://bitbucket.org/d3f1g0/meta-emak-distro
+  * GIT: `git@bitbucket.org:d3f1g0/meta-emak-distro.git`
+
+ - *meta-emak-bsp*: linux kernel, distribution images and recipes
+  * Path: `sources/meta-emak-bsp`
+  * Project: https://bitbucket.org/d3f1g0/meta-emak-bsp
+  * GIT: `git@bitbucket.org:d3f1g0/meta-emak-bsp.git`
+
+ - *meta-emak-sdk*: Defigo Engine-E microservices
+  * Path: `sources/meta-emak-sdk`
+  * Project: https://bitbucket.org/d3f1g0/meta-emak-sdk
+  * GIT: `git@bitbucket.org:d3f1g0/meta-emak-sdk.git`
+
+ - *meta-qt5*: Qt5 support
+  * Path: `sources/meta-qt5`
+  * Project: https://github.com/meta-qt5/meta-qt5
+  * GIT: `git://github.com/meta-qt5/meta-qt5.git`
+
+ - *meta-variscite-fslc*: support for Variscite's i.MX based SOMs/boards
+  * Path: `sources/meta-variscite-fslc`
+  * Project: https://github.com/varigit/meta-variscite-fslc
+  * GIT: `git://github.com/varigit/meta-variscite-fslc.git`
+
+ - *meta-swupdate*: Yocto layer for deploy tool
+  * Path: `sources/meta-swupdate`
+  * Project: https://github.com/sbabic/meta-swupdate
+  * GIT: `git://github.com/sbabic/meta-swupdate.git`
+
+ - *meta-virtualization*: support for building Xen, KVM, Libvirt
+  * Path: `sources/meta-virtualization`
+  * Project: https://git.yoctoproject.org/git/meta-virtualization
+  * GIT: `git://git.yoctoproject.org/git/meta-virtualization.git`
